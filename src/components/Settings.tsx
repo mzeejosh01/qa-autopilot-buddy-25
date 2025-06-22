@@ -1,10 +1,10 @@
-
 import React, { useState } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
 import { Switch } from '@/components/ui/switch';
 import { toast } from '@/hooks/use-toast';
+import GitHubIntegration from '@/components/GitHubIntegration';
 
 const Settings = () => {
   const [githubToken, setGithubToken] = useState('ghp_xxxxxxxxxxxxxxxxxxxx');
@@ -53,6 +53,9 @@ const Settings = () => {
   return (
     <div className="max-w-4xl mx-auto px-6 py-8 space-y-8">
       <h1 className="text-3xl font-bold text-gray-900">Settings</h1>
+
+      {/* GitHub Integration */}
+      <GitHubIntegration />
 
       {/* GitHub Integration */}
       <Card>
